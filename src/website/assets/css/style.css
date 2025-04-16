@@ -1,0 +1,150 @@
+@import url(../../../main/defaultStyling/default.css);
+@import url(../../../main/navbar/before/style.css);
+@import url(../../../main/loadingScreen/loading.css);
+@import url(../../../main/footer/style.css);
+@import url(../../../main/swiper/swiper.css);
+:root{
+    --main-color: #5856b8;
+    --secondary-main-color: #08cffe;
+    --bg-color: #333;
+    --txt-color: rgb(253, 253, 253);
+}
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: var(--bg-color);
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 2rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+nav{
+    height: 50px !important;
+}
+.no-scroll{
+    overflow-x: hidden;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.web-intro{
+    height: 100vh;
+}
+.intro-text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+.loginBtn i{
+    padding: 10px ;
+}
+.intro-text h3{
+    font-size: 3rem;
+    margin-top: 9rem;
+    -webkit-text-stroke: 3px var(--txt-color);
+    font-weight: 900;
+    text-shadow: -6px 6px 1px var(--bg-color);
+}
+.intro-text h3 span{
+    margin-left: 26%;
+}
+span{
+    color: var(--main-color);
+    font-weight: 900;
+    font-family: Arial;
+    font-size: 8rem;
+    text-shadow: 4px 4px 15px var(--txt-color), -4px -4px 15px var(--txt-color), 4px -4px 25px var(--txt-color), 60px 0 100px var(--main-color);
+}
+.home-logo{
+    font-size: 1.5rem !important;
+    margin-top: 17px !important;
+}
+/* .advantages{
+    background: #2e3267;
+    height: 29rem;
+}
+.advantages h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+.advantages__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.advantages__left{
+    margin-right: 4rem;
+}
+.advantages__left p{
+    margin: 1rem 0 3rem;
+}
+.advantages__right{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+.advantage{
+    background: #424890;
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: all 400ms ease;
+}
+.advantage:hover{
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.advantage__icon{
+    background: #6c63ff;
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+.advantage h5{
+    margin: 2rem 0 1rem;
+}
+.advantage p {
+    font-size: 0.85rem;
+}
+.advantage:nth-child(2) .advantage__icon{
+    background:#f75842;
+}
+.advantage:nth-child(3) .advantage__icon{
+    background: #00bf8e;
+}
+.advantage:nth-child(4) .advantage__icon{
+    background: #f7c94b;
+}
+.advantage:nth-child(5) .advantage__icon{
+    background: #00bf8e;
+} */
+.login-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 35px;
+
+}
+.login-btn{
+    border: 2px solid var(--main-color);
+    padding: 15px 50px;
+    border-radius: 0.7rem;
+    color: var(--txt-color);
+    font-size: 1.4rem;
+    background: var(--main-color);
+    transition: all .4s ease;
+}
+.login-btn:hover{
+    transform: translateY(-10px);
+    background-color: var(--secondary-main-color);
+    color: var(--bg-color);
+    font-weight: bold;
+    box-shadow: 0 0 50px var(--secondary-main-color);
+    border: 5px solid var(--secondary-main-color);
+}

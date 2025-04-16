@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Obour Hospital</title>
+    <link rel="stylesheet"
+        href="../../../assets/icons/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+        <link rel="icon" href="../../../assets/imgs/logo.png">
+    <link rel="stylesheet" href="../../../../main/defaultStyling/default.css">
+    <link rel="stylesheet" href="../../../../main/loadingScreen/loading.css">
+    <link rel="stylesheet" href="../../../../main/navbar/after/style.css">
+    <link rel="stylesheet" href="../../../../main/footer/style.css">
+    <link rel="stylesheet" href="files/css/all.css">
+</head>
+
+<body style="overflow-y: scroll;">
+    <!-- Loading Screen-->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo"><span class="logo">HLQT WASL</span></div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navbar-->
+    <header>
+        <nav class="navbar">
+            <a href="../../home.html">
+                <div class="logo-nav">HLQT WASL</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#departments">Departements</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#appointment">Appointment</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#map">Location</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+
+    <!-- Introduction Section -->
+    <div class="container">
+        <div class="background-video" id="home">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="files/imgs/University/background-obor-hospital.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+
+            <div class="webpage-content">
+                <h3 class="intro">Welcome to El Obour Hospital</h3>
+                <p class="description">Your health is our priority. We provide high-quality medical care for all our
+                    patients.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about-us">
+        <div class="about-us-container">
+            <h2> <i class="fa-solid fa-people-group"></i> About Us </h2>
+            <p>
+                It was established according to the latest international models and is the largest in terms of modern facilities. It includes 43 beds, 13 operating rooms with the most modern capsule system in the world that prevents infection, 64 separate intensive care rooms with a complete isolation system, radiology devices that are considered among the best in international hospitals, a cardiology and catheterization department, and a special wing for the women and children department.
+            </p>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments">
+        <div class="container">
+            <h2> <i class="fa-regular fa-hospital"></i> Our Departments</h2>
+            <div class="department-list">
+                <div class="department">
+                    <h3> <i class="fa fa-stethoscope"></i>  Internal Medicine</h3>
+                    <p>Expert care for a range of chronic and acute illnesses.</p>
+                </div>
+                <div class="department">
+                    <h3> <i <i class=" fas fa-user-nurse "></i> Surgery</h3>
+                    <p>Advanced surgical procedures by our skilled team of surgeons.</p>
+                </div>
+                <div class="department">
+                    <h3> <i class="fas fa-child"></i> Pediatrics</h3>
+                    <p>Compassionate care for children, from newborns to teenagers.</p>
+                </div>
+                <div class="department">
+                    <h3> <i class="fa-solid fa-truck-medical"></i> Emergency</h3>
+                    <p>24/7 emergency services for urgent medical conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Medical Consultation</li>
+                <li>Outpatient Clinics</li>
+                <li>Emergency Care</li>
+                <li>Lab & Diagnostic Services</li>
+                <li>Appointment Booking</li>
+                <li>Online Test Results</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Section -->
+    <section id="appointment">
+        <div class="container">
+            <h2>Book an Appointment</h2>
+            <form action="#" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="department">Select Department</label>
+                <select id="department" name="department" required>
+                    <option value="internal-medicine">Internal Medicine</option>
+                    <option value="surgery">Surgery</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="emergency">Emergency</option>
+                    <!-- Add more departments if necessary -->
+                </select>
+
+                <label for="appointment-date">Appointment Date</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, please contact us.</p>
+            <ul>
+                <li><strong><i class="fa-solid fa-phone"></i></strong> +20 123 456 7890</li>
+                <li><strong><i class="fa-regular fa-envelope"></i></strong> info@kfsghospital.com</li>
+                <li><strong><i class="fa-solid fa-location-pin"></i></i></strong> Kafr El-Sheikh, Egypt</li>
+            </ul>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3416.325664560308!2d30.948272275455956!3d31.100679374408905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7ac79a47a32fb%3A0xfdad48b4f475424a!2sKafrelsheikh%20university%20hospital!5e0!3m2!1sen!2seg!4v1744748198254!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 HLQT WASL. All rights reserved.</p>
+            <ul class="footer-links">
+                <li class="footer-link"><a href="#"> <i class="fa-brands fa-facebook-f"></i> </a></li>
+                <li class="footer-link"><a href="#"> <i class="fa-brands fa-instagram"></i> </a></li>
+                <li class="footer-link"><a href="#"> <i class="fa-brands fa-x-twitter"></i> </a></li>
+                <li class="footer-link"><a href="#"> <i class="fa-brands fa-tiktok"></i> </a></li>
+                <li class="footer-link"><a href="#"> <i class="fa-brands fa-youtube"></i> </a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../../../../main/loadingScreen/loading.js"></script>
+    <script src="../../../../main/navbar/after/script.js"></script>
+    <script src="files/js/University-Hospital.js"></script>
+</body>
+
+</html>

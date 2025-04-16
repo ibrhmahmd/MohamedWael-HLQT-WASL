@@ -1,0 +1,129 @@
+/* internet.css */
+.internet-hero {
+  background-image: url(../imgs/internet-service-banner.jpg); /* Replace with your internet tower image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.internet-hero .hero-content {
+  background-color: rgba(0, 0, 0, 0.745);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.internet-hero .but {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.faq-section {
+  padding: 50px 20px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-section h2 {
+  color: var(--txt-color);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.faq-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 20px;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  color: var(--secondary-main-color);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question .arrow {
+  margin-left: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq-question.active .arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  color: #ccc;
+  line-height: 1.6;
+  overflow: hidden; /* Clip the content for animation */
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-question.active + .faq-answer {
+  max-height: 500px; /* Adjust based on your content */
+  margin-top: 10px;
+}
+
+.hotline-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hotline-section p {
+  color: var(--txt-color);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.provider-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.provider-logos img {
+  width: 100px;
+  height: 50px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.provider-logos img:nth-child(3){
+  position: relative;
+  top: -15px;
+}
+
+.provider-logos img:hover {
+  transform: scale(1.1);
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}

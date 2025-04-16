@@ -1,0 +1,54 @@
+# HLQT WASL Project Intelligence
+
+## Project Context
+- HLQT WASL is a comprehensive city guide for Kafr El-Sheikh (KFS)
+- The project serves as a local directory for restaurants, hospitals, and services
+- It includes user authentication with social media options
+- The application focuses on providing detailed information about local establishments
+
+## Project Structure Patterns
+- The project follows a clear separation between website pages (`src/website`) and reusable components (`src/main`)
+- Content is organized by service categories in `src/website/web/content`
+- Each service category has its own subdirectory with specific pages
+- Assets are organized into subdirectories (css, js, imgs, icons)
+- Service-specific assets are stored within each service category directory
+
+## Component Organization
+- Each UI component has its own directory in `src/main` with HTML, CSS, and JS files
+- Components include: navbar, cards, footer, loadingScreen, alerts, swiper, toTopBtn
+- Default styling is managed separately in `defaultStyling`
+- Components are imported via script tags at the bottom of HTML files
+- Card components are used consistently for service listings
+
+## Code Style Observations
+- HTML5 semantic markup is used for page structure
+- FontAwesome 6.7.2 is used consistently for icons
+- CSS classes follow a descriptive naming convention
+- JavaScript is organized by component functionality
+- Mobile-first responsive design with media queries
+- Consistent structure for service listing pages
+
+## Service Implementation
+- **Restaurants**: Directory with individual restaurant pages (Pizza Pan, Chickers, KFC, etc.)
+- **Hospitals**: Directory with individual hospital pages (General Hospital, University Hospital, etc.)
+- **Services**: Marketplace with various service categories (delivery, medical, internet, etc.)
+- **Tourism**: Coming soon section for tourism attractions
+- **Contact Form**: User feedback system with form validation
+
+## Content Patterns
+- Each service category follows a consistent layout:
+  1. Header with navigation
+  2. Image slider showcasing the category
+  3. Card-based directory of services
+  4. Footer with social links
+- Status indicators for content availability:
+  - "Coming Soon" for upcoming features
+  - Error indicators for unavailable content
+- Individual service pages provide detailed information about specific establishments
+
+## Project Evolution
+- Memory bank documentation has been updated with detailed content analysis
+- Service categories and organization have been documented
+- User journeys across different service types have been mapped
+
+*This intelligence document will be continuously updated as more code is examined and patterns are identified.* 

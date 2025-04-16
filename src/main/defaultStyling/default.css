@@ -1,0 +1,160 @@
+:root {
+    /* colors */
+    --main-color: #5856b8;
+    --secondary-main-color: #08cffe;
+    --bg-color: #333;
+    --txt-color: rgb(253, 253, 253);
+
+    /*transitions */
+    --transition-v-slow: all 1.5s ease-in-out;
+    --transition-slow: all 1s ease-in-out;
+    --transition-medium: all .75s ease-in-out;
+    --transition-fast: all .5s ease-in-out;
+    --transition-v-fast: all .35s ease-in-out;
+}
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: var(--bg-color);
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 2rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1;
+    text-rendering: optimizeSpeed;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+button,
+[role="button"] {
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+::-moz-placeholder {
+    opacity: 1;
+}
+
+textarea {
+    vertical-align: top;
+    overflow: auto;
+}
+
+[type='checkbox'],
+[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

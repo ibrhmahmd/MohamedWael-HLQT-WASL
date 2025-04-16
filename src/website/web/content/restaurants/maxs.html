@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HLQT WASL | Restaurants | Maxs</title>
+  <link rel="stylesheet"
+  href="../../../assets/icons/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+  <link rel="icon" href="../../../assets/imgs/logo.png">
+
+<link rel="stylesheet" href="../../../../main/defaultStyling/default.css">
+<link rel="stylesheet" href="../../../../main/swiper/swiper.css">
+<link rel="stylesheet" href="../../../../main/loadingScreen/loading.css">
+<link rel="stylesheet" href="../../../../main/navbar/after/style.css">
+<link rel="stylesheet" href="../../../../main/footer/style.css">
+<link rel="stylesheet" href="files/css/Maxs.css">
+</head>
+<body style="overflow-y: visible;">
+  <!-- Loading -->
+  <div class="loading-screen">
+      <div class="loading-content">
+          <div class="loading-logo"><span>HLQT WASL</span></div>
+          <div class="progress-bar">
+              <div class="progress"></div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Nav Bar-->
+  <header>
+      <nav class="navbar">
+          <a href="../../home.html"><div class="logo-nav">HLQT WASL</div></a>
+          <ul class="nav-links">
+              <li><a href="restaurant.html">Home</a></li>
+              <li><a href="#menuOffers">Menu & Offers</a></li>
+              <li><a href="#location">Location</a></li>
+              <li><a href="#delivery">Delivery</a></li>
+          </ul>
+          <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+          </div>
+      </nav>
+  </header>
+
+  <!-- Body -->
+  <!-- Background -->
+  <div class="background-container" id="home">
+      <div class="slider">
+          <div class="slider-track">
+              <div class="slide">
+                  <img src="files/imgs/Maxs-banner-1.jpg" alt="">
+              </div>
+              <div class="slide">
+                  <img src="files/imgs/Maxs-banner-2.jpg" alt="">
+              </div>
+              <div class="slide">
+                  <img src="files/imgs/Maxs-banner-3.jpg" alt="">
+              </div>
+          </div>
+          <div class="pagination"></div>
+      </div>
+      <div class="background-content">
+          <h1 class="background-content-title">Maxs</h1>
+          <p class="background-content-describtion">
+              It's a good pizza restaurant with <span class="gold">3.5 Star </span>Rating
+          </p>
+          <span class="info">
+              <i class="fa-solid fa-circle-info info-icon"></i>
+              <div class="info-bar">
+
+                  <div class="info-message">
+                      <div class="info-message-stars">
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                      </div>
+                  </div>
+              </div>
+          </span>
+      </div>
+  </div>
+
+
+  <!-- Menu & offers & location section -->
+  <section class="page-content" id="menuOffers">
+      <!-- Menu Section -->
+      <section class="menu-section">
+          <h2 class="menu-section-header header">Menu</h2>
+          <div class="menu-section-btns">
+              <a href="files/imgs/Maxs/menu/Maxs_menu.pdf" target="_blank"><button
+                      class="menu-section-btn-show btn-show"> <i class="fa-solid fa-eye"></i> Show</button></a>
+              <a href="files/imgs/Maxs/menu/Maxs_menu.pdf" download="pizza pan menu.pdf" target="_blank"><button class="menu-section-btn-download btn-download">
+                  <i class="fa-solid fa-download"></i> Download
+              </button></a>
+          </div>
+      </section>
+
+      <!-- Offers section-->
+      <section class="offers-section">
+          <h2 class="offers-section-header header">Offers</h2>
+          <div class="offers-section-btns">
+              <a href="#"><button class="offers-section-btn-show btn-show"  id="noOffersShowBtn"> <i class="fa-solid fa-eye"></i>
+                      Show</button></a>
+              <a href="#"><button  id="noOffersDownloadBtn" class="offers-section-btn-download btn-download"> <i
+                          class="fa-solid fa-download"></i> Download</button></a>
+          </div>
+      </section>
+
+      <!-- Location Section -->
+      <section class="location-section" id="location">
+          <h2 class="location-section-header header">Location</h2>
+          <button class="location-section-getLocationBtn" id="getLocationBtn"> <i
+                  class="fa-solid fa-map-location-dot"></i> Get</button>
+      </section>
+  </section>
+
+  <!-- Delivery Section -->
+  <span class="blur-delivery"></span>
+
+
+  <section id="delivery" class="get-delivery-section">
+      <div class="get-delivery-container">
+          <div class="get-delivery-img">
+              <img src="../assets-imgs/delivery.png" alt="">
+          </div>
+          <div class="get-delivery-content">
+              <h3>
+                  You can Order a delivery from this restaurant <br> Just click on this button to <br> get your Delivery
+              </h3>
+              <br>
+              <a href="../services/services.html" class="get-delivery-btn"> <i class="fa-solid fa-motorcycle"></i> Get
+                  Now <span class="sign-move"> <i class="fa-solid fa-chevron-right"></i> </span></a>
+          </div>
+      </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- Footer -->
+  <footer>
+      <div class="footer-content">
+          <p>&copy; 2025 HLQT WASL. All rights reserved.</p>
+          <ul class="footer-links">
+              <li class="footer-link"><a href="#"> <i class="fa-brands fa-facebook-f"></i> </a></li>
+              <li class="footer-link"><a href="#"> <i class="fa-brands fa-instagram"></i> </a></li>
+              <li class="footer-link"><a href="#"> <i class="fa-brands fa-x-twitter"></i> </a></li>
+              <li class="footer-link"><a href="#"> <i class="fa-brands fa-tiktok"></i> </a></li>
+              <li class="footer-link"><a href="#"> <i class="fa-brands fa-youtube"></i> </a></li>
+          </ul>
+      </div>
+  </footer>
+
+
+
+<script src="../../../../main/swiper/swiper.js"></script>
+<script src="../../../../main/loadingScreen/loading.js"></script>
+<script src="../../../../main/navbar/after/script.js"></script>
+<script src="files/js/maxs.js"></script>
+</body>
+</html>

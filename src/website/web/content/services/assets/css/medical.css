@@ -1,0 +1,225 @@
+.content h2{
+  font-size: 1.6rem !important;
+  -webkit-text-stroke: 0.5px var(--bg-color);
+  text-shadow: 3px 3px 5px var(--bg-color) !important;
+}
+/* medical.css */
+.hero-medical {
+  position: relative;
+  height: 60vh; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.hero-medical .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+}
+
+.hero-medical .content h2 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.medical-services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.medical-services .section-title h2 {
+  color: var(--txt-color);
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.medical-services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.medical-services .service-card {
+  background-color: #333;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for positioning the form */
+}
+
+.medical-services .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.medical-services .service-card h3 {
+  color: var(--secondary-main-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.medical-services .service-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.medical-services .service-card button {
+  padding: 10px 25px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.medical-services .service-card button:hover {
+  background-color: var(--secondary-main-color);
+}
+
+/* Doctor Appointment Form Styles */
+.doctor-appointment-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.doctor-appointment-form.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.doctor-appointment-form h3 {
+    color: var(--secondary-main-color);
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.close-form {
+  position: relative !important;
+  top: -19px !important;
+  right: 18px !important;
+  background: red !important;
+  border: none !important;
+  color: var(--txt-color) !important;
+  font-size: 1.5rem !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  transition: all 0.3s ease-in-out !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 1.5rem !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  font-size: 34px !important;
+}
+
+.close-form:hover {
+    background-color: var(--secondary-main-color) !important;
+    color: var(--bg-color) !important;
+    width: 60px !important;
+}
+
+.doctor-appointment-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.doctor-appointment-form .form-group {
+    margin-bottom: 0;
+}
+
+.doctor-appointment-form .form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.doctor-appointment-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--txt-color);
+}
+
+.doctor-appointment-form input,
+.doctor-appointment-form select,
+.doctor-appointment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #444;
+    color: var(--txt-color);
+    transition: all 0.3s ease;
+}
+
+.doctor-appointment-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.doctor-appointment-form input:focus,
+.doctor-appointment-form select:focus,
+.doctor-appointment-form textarea:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+.doctor-appointment-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.doctor-appointment-form button:hover {
+  background-color: var(--secondary-main-color);
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px var(--secondary-main-color);
+  color: var(--bg-color);
+  font-weight: bold;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}

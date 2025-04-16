@@ -1,0 +1,151 @@
+.background-intro {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    color: var(--txt-color);
+    text-shadow: 3px 3px 9px var(--bg-color);
+    padding: 0;
+    font-size: 2rem;
+    height: 95vh;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.pagination {
+    z-index: 2;
+}
+
+.background-intro h3 {
+    font-size: 3rem;
+    -webkit-text-stroke: 2px black;
+    font-weight: bold;
+    text-shadow: 4px 4px 5px var(--main-color);
+}
+
+.background-intro h3 span {
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-shadow: 4px -4px var(--bg-color), -4px -4px 10px var(--bg-color), 0px 8px 6px var(--main-color);
+    -webkit-text-stroke: 2px var(--main-color);
+}
+
+.background-intro p {
+    position: relative;
+    top: 170px;
+    left: 600px;
+    font-size: 20px;
+    text-shadow: -2px -2px black;
+    -webkit-text-stroke: 0.5px black;
+}
+.hospital-name-swiper{
+    font-size: 3rem !important;
+    color: var(--main-color);
+    text-shadow: 2px 2px var(--txt-color), 2px -2px var(--txt-color) , -2px 2px var(--txt-color), -2px -2px var(--txt-color) !important;
+}
+.hospital-name-swiper::after{
+    content: "";
+    animation: words-hospital-name 8s infinite,
+               typing-hospital-name 20s steps(14) infinite;
+}
+@keyframes words-hospital-name {
+    0%,
+    20%{
+        content: "Kafr El Sheikh General Hospital";
+    }
+    21%,
+    40%{
+        content: "Kafrelsheikh University Hospital";
+    }
+    41%,
+    60%{
+        content: "El Obour Hospital";
+    }
+    61%,
+    80%{
+        content: "Kafr El Sheikh Fever Hospital";
+    }
+    81%,
+    100%{
+        content: "Kafr El Sheikh Dermatology Hospital";
+    }
+}
+@keyframes typing-hospital-name {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 8px);
+    }
+}
+.our-hospitals {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.container-top {
+    font-size: 4rem;
+    color: var(--txt-color);
+    text-shadow: -4px 4px var(--bg-color), 0 0 20px var(--main-color);
+    -webkit-text-stroke: 2px black;
+    font-weight: 700;
+}
+
+.container-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    height: 400px;
+}
+.coming-soon {
+    position: absolute;
+    /* top: 10px; */
+    /* left: 10px; */
+    background-color: #222;
+    color: var(--secondary-main-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 2;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+.error404{
+    position: absolute;
+    /* top: 10px; */
+    /* left: 10px; */
+    background-color: #222;
+    color: #b50000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 2;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    margin-left: 10px;
+}

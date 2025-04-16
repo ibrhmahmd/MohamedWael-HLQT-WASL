@@ -1,0 +1,141 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-nav {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom-color: #5856b8;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 40%;
+        height: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        padding-top: 60px;
+        padding-left: 20px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        z-index: 99;
+        backdrop-filter: blur(50px);
+        border-bottom-left-radius: 4rem;
+        color: #333;
+    }
+
+    .nav-links li {
+        opacity: 1;
+        margin: 0.5em 0;
+        width: 100%;
+        transform: translateX(30px);
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        color: #333;
+    }
+
+    .nav-active .nav-links li {
+        opacity: 1 !important;
+        transform: translateX(0);
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 0.7em 0;
+        color: white;
+        text-decoration: none;
+        border-bottom: none !important;
+        border-left: 3px solid transparent;
+        transition: all .3s ease-in-out;
+        padding-left: 15px;
+    }
+
+    .nav-links li a:hover{
+        border-left-color: #5856b8;
+    }
+
+    .burger {
+        display: block;
+        z-index: 1000;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* .no-scroll {
+    overflow: hidden;
+} */
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

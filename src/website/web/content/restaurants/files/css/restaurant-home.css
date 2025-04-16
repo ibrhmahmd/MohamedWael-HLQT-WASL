@@ -1,0 +1,225 @@
+body{
+    scroll-behavior: smooth;
+    
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top i {
+    position: absolute;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.progress-circle {
+    transform: rotate(-90deg);
+    position: absolute;
+}
+
+.progress-circle circle {
+    fill: none;
+    stroke: #555;
+    stroke-dasharray: 163.36;
+    /* 2πr = 2*π*26 */
+    stroke-dashoffset: 0;
+}
+
+.progress-circle .progress {
+    stroke: var(--main-color);
+    stroke-dashoffset: 163.36;
+    transition: stroke-dashoffset 0.2s ease;
+}
+
+
+.background-intro {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    color: var(--txt-color);
+    text-shadow: 3px 3px 9px var(--bg-color);
+    padding: 0;
+    font-size: 2rem;
+    height: 95vh;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.pagination {
+    z-index: 2;
+}
+
+.background-intro h3 {
+    font-size: 3rem;
+    -webkit-text-stroke: 2px black;
+    font-weight: bold;
+    text-shadow: 4px 4px 5px var(--main-color);
+}
+
+.background-intro h3 span {
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-shadow: 4px -4px var(--bg-color), -4px -4px 10px var(--bg-color), 0px 8px 6px var(--main-color);
+    -webkit-text-stroke: 2px var(--main-color);
+}
+
+.background-intro p {
+    position: relative;
+    bottom: -200px;
+    left: 57%;
+    font-size: 20px;
+    text-shadow: -2px -2px black;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.our-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.container-top {
+    font-size: 4rem;
+    color: var(--txt-color);
+    text-shadow: -4px 4px var(--bg-color), 0 0 20px var(--main-color);
+    -webkit-text-stroke: 2px black;
+    font-weight: 700;
+}
+
+.container-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Creates 3 equal width columns */
+    grid-template-rows: repeat(2, auto);
+    /* Creates 2 automatic height rows */
+    gap: 20px;
+    /* Adjust the gap between cards as needed */
+    padding: 20px;
+    /* Optional: Add some padding around the grid */
+}
+
+.card {
+    height: 480px;
+}
+
+.get-delivery-section {
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    width: 60%;
+    height: 200px;
+    border-radius: 7px;
+    position: relative;
+    left: 20%;
+    color: var(--txt-color);
+    font-size: 1.8rem;
+    text-align: start;
+}
+
+.get-delivery-img {
+    position: relative;
+    left: 500px;
+    width: 40%;
+    top: 74px;
+}
+
+.get-delivery-content {
+    position: relative;
+    left: -100px;
+    top: -85px;
+}
+
+.get-delivery-content a {
+    border: 2px solid var(--txt-color);
+    color: var(--txt-color);
+    padding: 10px 25px;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-left: 200px;
+    transition: all .5s ease-in-out, transform .5s ease;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.get-delivery-content a:hover {
+    background-color: var(--secondary-main-color);
+    border-color: var(--secondary-main-color);
+    color: var(--bg-color);
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px var(--secondary-main-color);
+}
+
+.sign-move {
+    position: absolute;
+    font-size: 3.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bg-color);
+    opacity: 0;
+    right: 100%;
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.get-delivery-content a:hover .sign-move {
+    opacity: 1;
+    right: 10px;
+  }
+
+.blur-delivery{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 38vh;
+    backdrop-filter: blur(5px);
+    margin-top: -15px;
+}
+footer{
+    z-index: 100;
+}
+.coming-soon{
+    position: absolute;
+    /* top: 10px; */
+    /* left: 10px; */
+    background-color: #222;
+    color: var(--secondary-main-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 2;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    margin-left: 10px;
+}

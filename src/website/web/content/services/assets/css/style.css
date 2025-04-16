@@ -1,0 +1,247 @@
+/* style.css (Global Styles) */
+:root {
+  --main-color: #5856d6;
+  --secondary-main-color: #0cdcf8;
+  --txt-color: #e0e0e0;
+  --bg-color: #1e1e1e;
+  --accent-color: #ff9800;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--secondary-main-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+}
+
+.slider-track {
+  display: flex;
+  width: 300%; /* Adjust based on the number of slides */
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.slide {
+  width: calc(100% / 3); /* Adjust based on the number of slides */
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.pagination span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination span.active {
+  background-color: white;
+}
+
+.hero .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  padding: 10px 25px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: var(--secondary-main-color);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 50px var(--secondary-main-color);
+    color: var(--bg-color);
+}
+
+.our-services {
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.title-lines {
+  flex: 1;
+  height: 2px;
+  background-color: #444;
+  position: relative;
+}
+
+.title-lines.left {
+  margin-right: 20px;
+}
+
+.title-lines.right {
+  margin-left: 20px;
+}
+
+.title-lines .line {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary-main-color);
+}
+
+.title-lines.left .line.top {
+  left: 0;
+  top: 0;
+}
+
+.title-lines.left .line.bottom {
+  left: 25px;
+  bottom: 0;
+}
+
+.title-lines.right .line.top {
+  right: 25px;
+  top: 0;
+}
+
+.title-lines.right .line.bottom {
+  right: 0;
+  bottom: 0;
+}
+
+.section-title h2 {
+  color: var(--txt-color);
+  font-size: 2.5rem;
+  margin: 0 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.coming-soon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #222;
+  color: var(--secondary-main-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 2;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.service-card {
+  position: relative;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0. 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--secondary-main-color);
+}
+
+.service-card h3 {
+  color: var(--secondary-main-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-card a {
+  /* display: block; */
+  padding: 30px;
+  color: inherit;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.service-card a:hover h3 {
+  color: var(--accent-color);
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon !! - HLQT WASL</title>
+  <link rel="icon" href="../../../assets/imgs/logo.png">
+
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      user-select: none;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .topleft {
+      position: absolute;
+      top: 0;
+      left: 16px;
+      background-color: #222;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+      border-radius: 0.3rem;
+      opacity: 0.8;
+      box-shadow: 0 0 20px #fff;
+      width: 10%;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    }
+
+    .bottomleft {
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      background-color: #222;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+      border-radius: 0.3rem;
+      opacity: 0.8;
+      box-shadow: 0 0 20px #fff;
+      width: 20%;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .bottomleft a{
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* text-align: center; */
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      background-color: #222;
+      width: 70%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      border-radius: 2rem;
+      opacity: 0.8;
+      box-shadow: 0 0 20px #fff;
+    }
+
+    .middle h1, .middle p, .middle hr {
+      opacity: 1;
+      color: #fff;
+      text-shadow:  0 1px 3px #fff;
+      -webkit-text-stroke: 1px #333;
+    }
+
+    hr {
+      margin: auto;
+      width: 40%;
+    }
+    </style>
+</head>
+<body>
+  <div class="background-video">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="../../assets/imgs/background-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="bgimg">
+    <div class="topleft">
+      <p>HLQT WASL</p>
+    </div>
+    <div class="middle">
+      <h1>COMING SOON</h1>
+      <hr>
+      <p id="demo" style="font-size:30px"></p>
+    </div>
+    <div class="bottomleft">
+      <p>Working On It right now , <a href="restaurant.html">Return Back</a> !!</p>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+  <script>
+
+    window.addEventListener('load', function() {
+    const video = document.getElementById('bg-video');
+    video.style.opacity = 0;
+    setTimeout(()=> {
+      video.style.transition = "opacity 1s ease-in-out";
+      video.style.opacity = 1;
+    }, 100)
+    });
+  // Set the date we're counting down to
+  var countDownDate = new Date("June 5, 2025 15:37:25").getTime();
+
+  // Update the count down every 1 second
+  var countdownfunction = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(countdownfunction);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
+
+  </body>
+</html>
