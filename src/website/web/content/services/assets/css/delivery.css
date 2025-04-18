@@ -16,10 +16,13 @@
   text-shadow: 4px 4px 4px rgb(0 0 0);
   font-size: 1.5rem;
   -webkit-text-stroke: thin var(--bg-color);
+  width: 90%;
+  max-width: 800px;
 }
 
 .hero-delivery .content h2 {
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .hero-delivery .content #delivery-time {
@@ -39,7 +42,7 @@
   background-color: #444;
   border-radius: 8px;
   display: grid;
-  grid-template-columns: 1fr; /* Initially one column */
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 20px;
 }
@@ -47,6 +50,7 @@
 .step {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  width: 100%;
 }
 
 .step.active {
@@ -61,13 +65,14 @@
 
 .step select,
 .step input[type="text"] {
-  width: calc(100% - 20px);
+  width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #666;
   border-radius: 4px;
   background-color: #333;
   color: var(--txt-color);
+  font-size: 1rem;
 }
 
 .step button {
@@ -79,97 +84,128 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-right: 10px;
+  font-size: 1rem;
 }
 
 .step button:hover {
   background-color: var(--secondary-main-color);
 }
 
-.step#step1 {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.step#step2 {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.step#step3 {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-.step#step4 {
-  grid-column: 1;
-  grid-row: 4;
-}
-
-/* Adjust grid when more steps are active */
-.order-container.steps-2 {
+/* Grid layouts for different step counts */
+.order-container.steps-2,
+.order-container.steps-3,
+.order-container.steps-4 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
 }
 
-.order-container.steps-2 #step1 {
-  grid-column: 1;
-  grid-row: 1;
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .hero-delivery {
+    height: 50vh;
+  }
+
+  .hero-delivery .content {
+    font-size: 1.3rem;
+    width: 85%;
+  }
+
+  .order-container {
+    max-width: 500px;
+  }
+
+  .step h3 {
+    font-size: 1.2rem;
+  }
 }
 
-.order-container.steps-2 #step2 {
-  grid-column: 2;
-  grid-row: 1;
+@media screen and (max-width: 768px) {
+  .hero-delivery {
+    height: 40vh;
+  }
+
+  .hero-delivery .content {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+
+  .order-container {
+    max-width: 400px;
+    padding: 15px;
+  }
+
+  .step h3 {
+    font-size: 1.1rem;
+  }
+
+  .step select,
+  .step input[type="text"] {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .step button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Single column layout for smaller screens */
+  .order-container.steps-2,
+  .order-container.steps-3,
+  .order-container.steps-4 {
+    grid-template-columns: 1fr;
+  }
 }
 
-.order-container.steps-3 {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+@media screen and (max-width: 480px) {
+  .hero-delivery {
+    height: 35vh;
+  }
+
+  .hero-delivery .content {
+    font-size: 1rem;
+    width: 95%;
+  }
+
+  .choose-order-section {
+    padding: 30px 15px;
+  }
+
+  .order-container {
+    max-width: 100%;
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+  }
+
+  .step select,
+  .step input[type="text"] {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  .step button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    margin-right: 5px;
+  }
 }
 
-.order-container.steps-3 #step1 {
-  grid-column: 1;
-  grid-row: 1;
-}
+/* Landscape mode for mobile devices */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  .hero-delivery {
+    height: 60vh;
+  }
 
-.order-container.steps-3 #step2 {
-  grid-column: 2;
-  grid-row: 1;
-}
+  .hero-delivery .content {
+    font-size: 1.1rem;
+  }
 
-.order-container.steps-3 #step3 {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.order-container.steps-4 {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-}
-
-.order-container.steps-4 #step1 {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.order-container.steps-4 #step2 {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.order-container.steps-4 #step3 {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.order-container.steps-4 #step4 {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.step.hidden {
-  display: none;
-}
-
-#item-selection select {
-  width: 100%;
+  .order-container {
+    max-width: 90%;
+    margin: 20px auto;
+  }
 }

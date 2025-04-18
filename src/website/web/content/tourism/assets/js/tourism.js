@@ -1,6 +1,36 @@
-   // Loading Screen
-   const loadingScreen = document.querySelector('.loading-screen'),
-   progressBar = document.querySelector('.progress');
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.querySelector('.loading-screen');
+    const navbar = document.querySelector('.navbar');
+    const changingText = document.querySelector('.changing-text');
+    const texts = ['Explore', 'Discover', 'Experience'];
+    let currentIndex = 0;
+
+    setTimeout(() => {
+        loadingScreen.style.display = 'none';
+    }, 2000);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    function changeText() {
+        changingText.textContent = texts[currentIndex];
+        currentIndex = (currentIndex + 1) % texts.length;
+        changingText.style.animation = 'none';
+        void changingText.offsetWidth;
+        changingText.style.animation = 'fadeIn 1s ease-in-out';
+    }
+
+    setInterval(changeText, 3000);
+});
+
+// Loading Screen
+const loadingScreen = document.querySelector('.loading-screen'),
+progressBar = document.querySelector('.progress');
 
 let progress = 0;
 

@@ -3,263 +3,191 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HLQT WASL | HOME</title>
-    <!-- <link rel="stylesheet" href="../../main/toTopBtn/style.css"> -->
-    <link rel="stylesheet" href="../assets/icons/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
-    <link rel="icon" href="../assets/imgs/logo.png">
-    <link rel="stylesheet" href="../../main/cards/cards.css">
-    <link rel="stylesheet" href="../../main/defaultStyling/default.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLQT WASL - Home</title>
+    <link rel="stylesheet" href="../../main/loadingScreen/style.css">
+    <link rel="stylesheet" href="../../main/navbar/style.css">
     <link rel="stylesheet" href="../../main/footer/style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="../../main/navbar/after/style.css">
-    <link rel="stylesheet" href="../../main/loadingScreen/loading.css">
-
+    <link rel="stylesheet" href="../../main/defaultStyling/style.css">
+    <link rel="stylesheet" href="../../main/swiper/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<!-- Loaing Screen-->
     <div class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo"><span class="logo">HLQT WASL</span></div>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-        </div>
+        <div class="loading-spinner"></div>
     </div>
 
+    <button class="to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-
-    <!-- To top btn-->
-    <div class="scroll-to-top" id="scrollToTop">
-        <i class="fa-solid fa-arrow-up"></i>
-    </div>
-
-
-
-    <!-- Nav Bar-->
-    <header>
-        <nav class="navbar">
-            <div class="logo-nav">HLQT WASL</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#adventures">Features</a></li>
-                <li><a href="#services">Our Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="home.html">
+                    <img src="../../assets/images/logo.png" alt="HLQT WASL Logo">
+                </a>
             </div>
-        </nav>
-    </header>
-
-    <!-- Body -->
-    <!-- Intro -->
-
-    <div class="background-video" id="home">
-        <video autoplay muted loop playsinline id="bg-video">
-            <source src="assets/imgs/background-video.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-
-
-        <div class="webpage-content">
-            <h3 class="intro">Learn EveryThing about <br> <span>
-                    <center>KFS</center>
-                </span></h3>
-        </div>
-    </div>
-
-    <!-- Advantages Section-->
-    <section class="advantages" id="adventures">
-        <div class="container advantages__container">
-            <div class="advantages__left">
-                <h1>Our SITE</h1>
-                <p>
-                    Charactarized By
-                </p>
+            <div class="nav-links">
+                <a href="home.html" class="active">Home</a>
+                <a href="content/services/services.html">Services</a>
+                <a href="content/tourism/tourism.html">Tourism</a>
+                <a href="content/about/about.html">About</a>
+                <a href="content/contact/contact.html">Contact</a>
             </div>
-            <div class="advantages__right">
-                <article class="advantage">
-                    <span class="advantage__icon"> <i class="fa-solid fa-book fa-bounce"></i> </span>
-                    <h5>KnowLedge</h5>
-                    <p>
-                        Our Site has alot of information and KnowLedge that you can benefit from it
-                    </p>
-                </article>
-
-                <article class="advantage">
-                    <span class="advantage__icon"> <i class="fa-solid fa-dollar-sign fa-bounce"></i> </span>
-                    <h5>Free</h5>
-                    <p>
-                        Our SITE is completly Free to use that anyone can use it with no money
-                    </p>
-                </article>
-
-                <article class="advantage">
-                    <span class="advantage__icon"> <i class="fa-solid fa-face-smile fa-bounce"></i> </span>
-                    <h5>Easy</h5>
-                    <p>
-                        It's extremly easy to use
-                    </p>
-                </article>
-
-                <article class="advantage">
-                    <span class="advantage__icon"> <i class="fa-solid fa-user-tie fa-bounce"></i> </span>
-                    <h5>24/7 Support</h5>
-                    <p>
-                        We have a 24/7 customer support, so send to us at any time
-                    </p>
-                </article>
-
-                <article class="advantage">
-                    <span class="advantage__icon"> <i class="fa-solid fa-check fa-bounce"></i> </span>
-                    <h5>Truth</h5>
-                    <p>
-                        Our Website Information Is 100% true and we get it from trusted sources
-                    </p>
-                </article>
-
-                <article class="advantage">
-                    <span class="advantage__icon"> <i class="fa-solid fa-v fa-bounce"></i> </span>
-                    <h5>Trusted</h5>
-                    <p>
-                        Our SITE is trusted by many companies
-                    </p>
-                </article>
+            <div class="nav-buttons">
+                <a href="../../signInUp.html" class="btn btn-primary">Sign In</a>
+                <a href="../../signInUp.html" class="btn btn-secondary">Sign Up</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Services Section-->
-    <section class="services-section" id="services">
-        <div class="services-container">
-            <div class="services-container-top">
-                <h3>
-                    We have alot of services to benefit <br> in Our SITE
-                </h3>
+    <main>
+        <section class="intro">
+            <div class="intro-container">
+                <div class="intro-content">
+                    <h1>Welcome to HLQT WASL</h1>
+                    <p>Your trusted partner in construction and development</p>
+                    <a href="content/services/services.html" class="btn btn-primary">Explore Services</a>
+                </div>
+                <div class="intro-image">
+                    <img src="../../assets/images/intro.jpg" alt="Construction Site">
+                </div>
             </div>
-            <div class="services-container-bottom">
-                <article class="service">
-                    <div class="card">
-                        <img src="assets/imgs/restaurants.jpg" alt="" style="width:100%">
-                        <div class="card-container">
-                            <h4><b>Restaurants</b></h4>
-                            <p>
-                                Know about the restaurants in KFS by our Site
-                            </p>
-                            <a href="content/restaurants/restaurant.html" class="exploreBtn"> <i class="fa-solid fa-magnifying-glass"></i> Know More</a>
-                        </div>
-                    </div>
-                </article>
+        </section>
 
-                <article class="service">
-                    <div class="card">
-                        <img src="assets/imgs/hospital.jpg" alt="" style="width:100%">
-                        <div class="card-container">
-                            <h4><b>Hospitals</b></h4>
-                            <p>
-                                Know about the hospitals in KFS by our Site
-                            </p>
-                            <a href="content/hospitals/hospitals.html" class="exploreBtn exploreBtnTwo"> <i class="fa-solid fa-magnifying-glass"></i>
-                                Know More</a>
-                        </div>
+        <section class="advantages">
+            <div class="advantages-container">
+                <h2>Why Choose Us</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Quality Work</h3>
+                        <p>We deliver the highest quality in every project</p>
                     </div>
-                </article>
-
-                <article class="service">
-                    <div class="card">
-                        <img src="assets/imgs/tourism.jpg" alt="" style="width:100%">
-                        <div class="card-container">
-                            <h4><b>Tourism</b></h4>
-                            <p>
-                                Know about the tourism in KFS by our Site
-                            </p>
-                            <a href="#" class="exploreBtn exploreBtnThree"> <i class="fa-solid fa-magnifying-glass"></i>
-                                Know More</a>
-                        </div>
+                    <div class="advantage-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>On Time Delivery</h3>
+                        <p>We respect deadlines and deliver on time</p>
                     </div>
-                </article>
-
-                <article class="service">
-                    <div class="card">
-                        <img src="assets/imgs/services.jpg" alt="" style="width:100%">
-                        <div class="card-container">
-                            <h4><b>Other Services</b></h4>
-                            <p>
-                                Get Benefit From Our Services in Our SITE
-                            </p>
-                            <a href="content/services/services.html" class="exploreBtn exploreBtnFour"> <i class="fa-solid fa-magnifying-glass"></i>
-                                Know More</a>
-                        </div>
+                    <div class="advantage-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Professional Team</h3>
+                        <p>Our team consists of experienced professionals</p>
                     </div>
-                </article>
+                    <div class="advantage-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safety First</h3>
+                        <p>We prioritize safety in all our operations</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-
-    <!-- Contact Us Section-->
-    <section class="contact-us-section" id="contact">
-        <div class="contact-us-container">
-            <div class="contact-us-title">
-                <h2><span class="title">Contact</span> <span class="us">US</span></h2>
-                <p>
-                    We have 24/7 customer support, so contact us at any time
-                </p>
-            </div>
-            <div class="contact-us-form">
-                <form class="form" id="form" action="home.html">
-                    <div class="contact-left">
-                        <input type="text" class="username-input" id="username-input" required placeholder="Enter your name....">
-                        <br>
-                        <input type="email" class="email-input" id="email-input" required placeholder="Enter your email....">
-                        <br>
-                        <input type="number" class="phone-number-input" id="phone-number-input" required
-                            placeholder="Enter your phone Number....">
-                        <br>
+        <section class="services">
+            <div class="services-container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="../../assets/images/service1.jpg" alt="Construction">
+                        <h3>Construction</h3>
+                        <p>Professional construction services for all types of buildings</p>
+                        <a href="content/services/services.html" class="btn btn-secondary">Learn More</a>
                     </div>
-                    <div class="contact-right">
-                        <div class="message-box">
-                            <textarea id="message-input" rows="7" cols="60"
-                                placeholder="Enter Your Message Here...." required></textarea>
+                    <div class="service-card">
+                        <img src="../../assets/images/service2.jpg" alt="Renovation">
+                        <h3>Renovation</h3>
+                        <p>Transform your space with our renovation services</p>
+                        <a href="content/services/services.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <img src="../../assets/images/service3.jpg" alt="Maintenance">
+                        <h3>Maintenance</h3>
+                        <p>Keep your property in perfect condition</p>
+                        <a href="content/services/services.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>123 Construction St, Building City</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+123 456 7890</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@hlqtwasl.com</p>
                         </div>
                     </div>
-                    <div class="send-message">
-                        <button type="submit" class="send-btn" id="send-btn"> <i class="fa-solid fa-paper-plane"></i>
-                            SEND</button>
-                    </div>
-                    <div class="message-prompt">
-                         <span class="error"></span>
-                    </div>
-
-                </form>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
             </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 HLQT WASL. All rights reserved.</p>
-            <ul class="footer-links">
-                <li class="footer-link"><a href="#"> <i class="fa-brands fa-facebook-f"></i> </a></li>
-                <li class="footer-link"><a href="#"> <i class="fa-brands fa-instagram"></i> </a></li>
-                <li class="footer-link"><a href="#"> <i class="fa-brands fa-x-twitter"></i> </a></li>
-                <li class="footer-link"><a href="#"> <i class="fa-brands fa-tiktok"></i> </a></li>
-                <li class="footer-link"><a href="#"> <i class="fa-brands fa-youtube"></i> </a></li>
-            </ul>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../../assets/images/logo.png" alt="HLQT WASL Logo">
+                    <p>Your trusted partner in construction and development</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="home.html">Home</a>
+                    <a href="content/services/services.html">Services</a>
+                    <a href="content/tourism/tourism.html">Tourism</a>
+                    <a href="content/about/about.html">About</a>
+                    <a href="content/contact/contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Construction St, Building City</p>
+                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@hlqtwasl.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HLQT WASL. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-
-    <script src="../../main/loadingScreen/loading.js"></script>
-    <script src="../../main/toTopBtn/script.js"></script>
-    <script src="../assets/icons/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/js/all.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/mainValidation.js"></script>
-    <script src="../../main/navbar/after/script.js"></script>
+    <script src="https://kit.fontawesome.com/your-code.js"></script>
+    <script src="../../main/loadingScreen/script.js"></script>
+    <script src="../../main/navbar/script.js"></script>
+    <script src="../../main/footer/script.js"></script>
+    <script src="../../main/swiper/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

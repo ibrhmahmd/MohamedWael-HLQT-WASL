@@ -35,9 +35,9 @@
 
 .progress-bar {
     width: 100%;
-    height: 5px; 
+    height: 5px;
     background-color: #333;
-    border-radius: 0; 
+    border-radius: 0;
     overflow: hidden;
 }
 
@@ -47,4 +47,47 @@
     background-color: var(--main-color);
     color: var(--main-color);
     transition: width 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .loading-screen {
+    font-size: 40px;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .loading-screen {
+    font-size: 30px;
+  }
+
+  .logo {
+    font-size: 30px;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+
+  .progress-bar {
+    height: 4px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .loading-screen {
+    font-size: 24px;
+  }
+
+  .logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .progress-bar {
+    height: 3px;
+  }
 }

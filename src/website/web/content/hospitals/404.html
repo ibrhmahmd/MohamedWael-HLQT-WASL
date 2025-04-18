@@ -1,17 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 Page Not Found! - HLQT WASL</title>
   <link rel="stylesheet"
-        href="../../../assets/icons/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
-        <link rel="icon" href="files/imgs/error.png">
-    <link rel="stylesheet" href="../../../../main/defaultStyling/default.css">
-    <link rel="stylesheet" href="../../../../main/navbar/after/style.css">
-    <link rel="stylesheet" href="../../../../main/footer/style.css">
-</head>
-<body>
+    href="../../../assets/icons/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+  <link rel="icon" href="files/imgs/404-error.png">
+  <link rel="stylesheet" href="../../../../main/defaultStyling/default.css">
+  <link rel="stylesheet" href="../../../../main/navbar/after/style.css">
+  <link rel="stylesheet" href="../../../../main/footer/style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    #bg-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .error-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .error-content {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      width: 90%;
+      margin: 0 auto;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .error-code {
+      font-size: clamp(4rem, 15vw, 8rem);
+      font-weight: bold;
+      color: #2c3e50;
+      margin: 0;
+      line-height: 1;
+      background: linear-gradient(45deg, #2c3e50, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .error-message {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+      color: #34495e;
+      margin: 1rem 0 2rem;
+    }
+
+    .error-description {
+      color: #7f8c8d;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      padding: 0 1rem;
+    }
+
+    .home-button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+
+    .home-button:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-icon {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+      color: #e74c3c;
+      margin-bottom: 1rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .error-content {
+        padding: 1.5rem;
+        width: 95%;
+      }
+
+      .home-button {
+        padding: 0.7rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-video" id="home">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="../../assets/imgs/background-video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <div class="error-container">
+    <div class="error-content">
+      <i class="fa-solid fa-xmark error-icon"></i>
+      <h1 class="error-code">404</h1>
+      <h2 class="error-message">Oops! Page Not Found</h2>
+      <p class="error-description">
+        The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+      </p>
+      <a href="../hospitals/hospitals.html" class="home-button">
+        <i class="fas fa-home"></i> Back to Home
+      </a>
+    </div>
+  </div>
 </body>
+
 </html>

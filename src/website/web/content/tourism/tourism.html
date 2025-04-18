@@ -3,141 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourism in Kafrelsheikh</title>
-    <link rel="icon" href="../../../assets/imgs/logo.png">
-    <link rel="stylesheet" href="../../../assets/icons/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
-    <link rel="stylesheet" href="../../../../main/defaultStyling/default.css">
-    <link rel="stylesheet" href="../../../../main/navbar/after/style.css">
-    <link rel="stylesheet" href="../../../../main/footer/style.css">
-    <link rel="stylesheet" href="../../../../main/loadingScreen/loading.css">
-    <link rel="stylesheet" href="assets/css/tourism.css">
+    <title>HLQT WASL - Tourism</title>
+    <link rel="stylesheet" href="../../../main/loadingScreen/style.css">
+    <link rel="stylesheet" href="../../../main/navbar/style.css">
+    <link rel="stylesheet" href="../../../main/footer/style.css">
+    <link rel="stylesheet" href="../../../main/defaultStyling/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Loading Screen -->
     <div class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <span>HLQT WASL</span>
+        <div class="loading-spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../home.html">
+                    <img src="../../../assets/images/logo.png" alt="HLQT WASL Logo">
+                </a>
             </div>
-            <div class="progress-bar">
-                <div class="progress"></div>
+            <div class="nav-links">
+                <a href="../../home.html">Home</a>
+                <a href="../services/services.html">Services</a>
+                <a href="tourism.html" class="active">Tourism</a>
+                <a href="../about/about.html">About</a>
+                <a href="../contact/contact.html">Contact</a>
             </div>
+            <div class="nav-buttons">
+                <a href="../../../signInUp.html" class="btn btn-primary">Sign In</a>
+                <a href="../../../signInUp.html" class="btn btn-secondary">Sign Up</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background-slider">
+        <div class="slider-content">
+            <h1>Explore Kafr El-Sheikh</h1>
+            <p>Discover the beauty and history of our city</p>
         </div>
     </div>
 
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo-nav">KFS Recreation</div>
-            <ul class="nav-links">
-                <li><a href="../../home.html">Home</a></li>
-                <li><a href="#main-content">Explore</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Background Slider -->
-    <div class="slider-container">
-        <div class="background">
-            <img src="assets/imgs/background.gif" alt="">
-        </div>
-            <div class="slider-content">
-                <h1>Tourism areas <br> in KFS</h1>
-                <p>There are a lot of Tourism areas in KFS like <span class="changing-text">City Club</span></p>
-            </div>
-            <div class="pagination"></div>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <main class="main-content" id="main-content">
-        <h2 class="section-title">Explore Kafrelsheikh</h2>
-
-        <div class="cards-container">
-            <!-- Baltim Summer Resort -->
-            <div class="card">
-                <img src="assets/imgs/Baltim.jpg" alt="Baltim Summer Resort" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">Baltim Summer Resort</h3>
-                    <a href="baltim-resort.html" class="card-btn">Learn More</a>
-                </div>
+    <main class="main-content">
+        <div class="tourism-grid">
+            <div class="tourism-card">
+                <img src="assets/images/baltim.jpg" alt="Baltim Summer Resort">
+                <h3>Baltim Summer Resort</h3>
+                <p>A beautiful coastal resort perfect for summer vacations</p>
+                <a href="baltim-resort.html" class="btn btn-primary">Explore</a>
             </div>
 
-            <!-- Kafr El-Sheikh Museum -->
-            <div class="card">
-                <img src="assets/imgs/KFS-museum.jpg" alt="Kafr El-Sheikh Museum" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">Kafr El-Sheikh Museum</h3>
-                    <a href="museum.html" class="card-btn">Learn More</a>
-                </div>
+            <div class="tourism-card">
+                <img src="assets/images/museum.jpg" alt="Kafr El-Sheikh Museum">
+                <h3>Kafr El-Sheikh Museum</h3>
+                <p>Discover the rich history and culture of our region</p>
+                <a href="museum.html" class="btn btn-primary">Explore</a>
             </div>
 
-            <!-- Shakhlouba Island -->
-            <div class="card">
-                <img src="assets/imgs/Sha5loba.avif" alt="Shakhlouba Island" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">Shakhlouba Island</h3>
-                    <a href="shakhlouba.html" class="card-btn">Learn More</a>
-                </div>
+            <div class="tourism-card">
+                <img src="assets/images/shakhlouba.jpg" alt="Shakhlouba Island">
+                <h3>Shakhlouba Island</h3>
+                <p>A peaceful island getaway with stunning views</p>
+                <a href="shakhlouba.html" class="btn btn-primary">Explore</a>
             </div>
 
-            <!-- King Fouad Post Station -->
-            <div class="card">
-                <img src="assets/imgs/King-Fouad-Station.jpg" alt="King Fouad Post Station" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">King Fouad Post Station</h3>
-                    <a href="post-station.html" class="card-btn">Learn More</a>
-                </div>
+            <div class="tourism-card">
+                <img src="assets/images/post-station.jpg" alt="King Fouad Post Station">
+                <h3>King Fouad Post Station</h3>
+                <p>A historical landmark with unique architecture</p>
+                <a href="post-station.html" class="btn btn-primary">Explore</a>
             </div>
 
-            <!-- King Fuad I Palace -->
-            <div class="card">
-                <img src="assets/imgs/King-Fouad-Palace.jpg" alt="King Fuad I Palace" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">King Fuad I Palace</h3>
-                    <a href="palace.html" class="card-btn">Learn More</a>
-                </div>
+            <div class="tourism-card">
+                <img src="assets/images/palace.jpg" alt="King Fuad I Palace">
+                <h3>King Fuad I Palace</h3>
+                <p>Experience royal history in this magnificent palace</p>
+                <a href="palace.html" class="btn btn-primary">Explore</a>
             </div>
 
-            <!-- Hill of the Pharaohs -->
-            <div class="card">
-                <img src="assets/imgs/Hill-of-pharoes.jpg" alt="Hill of the Pharaohs" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">Hill of the Pharaohs</h3>
-                    <a href="pharaohs-hill.html" class="card-btn">Learn More</a>
-                </div>
+            <div class="tourism-card">
+                <img src="assets/images/pharaohs-hill.jpg" alt="Hill of the Pharaohs">
+                <h3>Hill of the Pharaohs</h3>
+                <p>An ancient site with fascinating historical significance</p>
+                <a href="pharaohs-hill.html" class="btn btn-primary">Explore</a>
             </div>
 
-            <!-- Edfina Bridges -->
-            <div class="card">
-                <img src="assets/imgs/Edfina.jpg" alt="Edfina Bridges" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">Edfina Bridges</h3>
-                    <a href="edfina-bridges.html" class="card-btn">Learn More</a>
-                </div>
+            <div class="tourism-card">
+                <img src="assets/images/edfina-bridges.jpg" alt="Edfina Bridges">
+                <h3>Edfina Bridges</h3>
+                <p>Iconic bridges with stunning architectural design</p>
+                <a href="edfina-bridges.html" class="btn btn-primary">Explore</a>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 HLQT WASL. All rights reserved.</p>
-            <ul class="footer-links">
-                <li class="footer-link"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li class="footer-link"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="footer-link"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li class="footer-link"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                <li class="footer-link"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../../../assets/images/logo.png" alt="HLQT WASL Logo">
+                    <p>Your trusted partner in construction and development</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="../../home.html">Home</a>
+                    <a href="../services/services.html">Services</a>
+                    <a href="tourism.html">Tourism</a>
+                    <a href="../about/about.html">About</a>
+                    <a href="../contact/contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Construction St, Building City</p>
+                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@hlqtwasl.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HLQT WASL. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script src="https://kit.fontawesome.com/your-code.js"></script>
+    <script src="../../../main/loadingScreen/script.js"></script>
+    <script src="../../../main/navbar/script.js"></script>
+    <script src="../../../main/footer/script.js"></script>
     <script src="assets/js/tourism.js"></script>
 </body>
 </html>

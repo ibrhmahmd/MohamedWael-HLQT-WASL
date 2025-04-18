@@ -1,143 +1,124 @@
-   // Loading Screen
-   const loadingScreen = document.querySelector('.loading-screen'),
-   progressBar = document.querySelector('.progress');
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.querySelector('.loading-screen');
+    const navbar = document.querySelector('.navbar');
+    const swiperContainer = document.querySelector('.swiper-container');
+    const prevButton = document.querySelector('.swiper-button-prev');
+    const nextButton = document.querySelector('.swiper-button-next');
+    const pagination = document.querySelector('.swiper-pagination');
+    let autoSlideTimer;
 
-let progress = 0;
+    setTimeout(() => {
+        loadingScreen.style.display = 'none';
+    }, 2000);
 
-function updateProgress() {
- progress += 1;
- progressBar.style.width = progress + '%';
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 
- if (progress >= 100) {
-     setTimeout(() => {
-         loadingScreen.style.transform = 'translateY(-100%)';
-         loadingScreen.style.transition = 'transform 0.5s ease';
-         setTimeout(() => {
-             loadingScreen.style.display = 'none';
-         }, 500);
-     }, 500);
- } else {
-     setTimeout(updateProgress, 20);
- }
-}
+    function updatePagination() {
+        const slides = document.querySelectorAll('.swiper-slide');
+        const activeSlide = document.querySelector('.swiper-slide.active');
+        const activeIndex = Array.from(slides).indexOf(activeSlide);
 
-updateProgress();
+        pagination.innerHTML = '';
+        slides.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('swiper-pagination-bullet');
+            if (index === activeIndex) {
+                dot.classList.add('swiper-pagination-bullet-active');
+            }
+            pagination.appendChild(dot);
+        });
+    }
 
-// Navbar
-const navSlide = () => {
- const burger = document.querySelector('.burger'),
-       nav = document.querySelector('.nav-links'),
-       navLinks = document.querySelectorAll('.nav-links li'),
-       body = document.querySelector('body');
+    function updateButtonStates() {
+        const slides = document.querySelectorAll('.swiper-slide');
+        const activeSlide = document.querySelector('.swiper-slide.active');
+        const activeIndex = Array.from(slides).indexOf(activeSlide);
 
- burger.addEventListener('click', () => {
-     nav.classList.toggle('nav-active');
-     body.classList.toggle('no-scroll');
+        prevButton.disabled = activeIndex === 0;
+        nextButton.disabled = activeIndex === slides.length - 1;
+    }
 
-     navLinks.forEach((link, index) => {
-         link.style.animation = '';
-         if (nav.classList.contains('nav-active')) {
-             link.style.animation = `slideIn 0.5s ease forwards ${index / 7 + 0.3}s`;
-         } else {
-             link.style.transform = 'translateX(30px)';
-         }
-     });
+    function initSwiper() {
+        const slides = document.querySelectorAll('.swiper-slide');
+        slides[0].classList.add('active');
+        updatePagination();
+        updateButtonStates();
+    }
 
-     burger.classList.toggle('toggle');
- });
-};
+    function autoSlide() {
+        const slides = document.querySelectorAll('.swiper-slide');
+        const activeSlide = document.querySelector('.swiper-slide.active');
+        const activeIndex = Array.from(slides).indexOf(activeSlide);
+        const nextIndex = (activeIndex + 1) % slides.length;
 
-navSlide();
+        activeSlide.classList.remove('active');
+        slides[nextIndex].classList.add('active');
+        updatePagination();
+        updateButtonStates();
+    }
 
-// Mini Swiper with Arrows
-const miniSwiper = document.querySelector('.mini-swiper'),
-   miniSlides = document.querySelectorAll('.mini-slide'),
-   miniPagination = document.querySelector('.mini-pagination'),
-   miniDots = document.querySelectorAll('.mini-pagination span'),
-   prevBtn = document.querySelector('.swiper-button-prev'),
-   nextBtn = document.querySelector('.swiper-button-next');
+    function nextSlide() {
+        const slides = document.querySelectorAll('.swiper-slide');
+        const activeSlide = document.querySelector('.swiper-slide.active');
+        const activeIndex = Array.from(slides).indexOf(activeSlide);
+        const nextIndex = (activeIndex + 1) % slides.length;
 
-let miniCurrentIndex = 0;
-const totalSlides = miniSlides.length;
-let swiperInterval;
+        activeSlide.classList.remove('active');
+        slides[nextIndex].classList.add('active');
+        updatePagination();
+        updateButtonStates();
+        resetAutoSlide();
+    }
 
-function updateMiniSwiper() {
- miniSwiper.style.transform = `translateX(-${miniCurrentIndex * 100}%)`;
+    function prevSlide() {
+        const slides = document.querySelectorAll('.swiper-slide');
+        const activeSlide = document.querySelector('.swiper-slide.active');
+        const activeIndex = Array.from(slides).indexOf(activeSlide);
+        const prevIndex = (activeIndex - 1 + slides.length) % slides.length;
 
- // Update pagination dots
- miniDots.forEach((dot, index) => {
-     dot.classList.toggle('active', index === miniCurrentIndex);
- });
+        activeSlide.classList.remove('active');
+        slides[prevIndex].classList.add('active');
+        updatePagination();
+        updateButtonStates();
+        resetAutoSlide();
+    }
 
- // Update button states
- prevBtn.classList.toggle('disabled', miniCurrentIndex === 0);
- nextBtn.classList.toggle('disabled', miniCurrentIndex === totalSlides - 1);
-}
+    function handlePaginationClick(e) {
+        if (e.target.classList.contains('swiper-pagination-bullet')) {
+            const slides = document.querySelectorAll('.swiper-slide');
+            const dots = document.querySelectorAll('.swiper-pagination-bullet');
+            const dotIndex = Array.from(dots).indexOf(e.target);
 
-// Initialize swiper
-function initSwiper() {
- updateMiniSwiper();
+            document.querySelector('.swiper-slide.active').classList.remove('active');
+            slides[dotIndex].classList.add('active');
+            updatePagination();
+            updateButtonStates();
+            resetAutoSlide();
+        }
+    }
 
- // Auto slide
- swiperInterval = setInterval(() => {
-     if (miniCurrentIndex < totalSlides - 1) {
-         miniCurrentIndex++;
-     } else {
-         miniCurrentIndex = 0;
-     }
-     updateMiniSwiper();
- }, 5000);
-}
+    function resetAutoSlide() {
+        clearInterval(autoSlideTimer);
+        autoSlideTimer = setInterval(autoSlide, 5000);
+    }
 
-// Next button click
-nextBtn.addEventListener('click', () => {
- if (miniCurrentIndex < totalSlides - 1) {
-     miniCurrentIndex++;
-     updateMiniSwiper();
-     resetAutoSlide();
- }
+    swiperContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideTimer);
+    });
+
+    swiperContainer.addEventListener('mouseleave', () => {
+        resetAutoSlide();
+    });
+
+    initSwiper();
+    autoSlideTimer = setInterval(autoSlide, 5000);
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+    pagination.addEventListener('click', handlePaginationClick);
 });
-
-// Previous button click
-prevBtn.addEventListener('click', () => {
- if (miniCurrentIndex > 0) {
-     miniCurrentIndex--;
-     updateMiniSwiper();
-     resetAutoSlide();
- }
-});
-
-// Pagination dots click
-miniDots.forEach((dot, index) => {
- dot.addEventListener('click', () => {
-     miniCurrentIndex = index;
-     updateMiniSwiper();
-     resetAutoSlide();
- });
-});
-
-// Reset auto-slide timer
-function resetAutoSlide() {
- clearInterval(swiperInterval);
- swiperInterval = setInterval(() => {
-     if (miniCurrentIndex < totalSlides - 1) {
-         miniCurrentIndex++;
-     } else {
-         miniCurrentIndex = 0;
-     }
-     updateMiniSwiper();
- }, 5000);
-}
-
-// Pause auto-slide on hover
-const swiperContainer = document.querySelector('.mini-swiper-container');
-swiperContainer.addEventListener('mouseenter', () => {
- clearInterval(swiperInterval);
-});
-
-swiperContainer.addEventListener('mouseleave', () => {
- resetAutoSlide();
-});
-
-// Initialize the swiper
-initSwiper();
